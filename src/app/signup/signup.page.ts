@@ -8,8 +8,6 @@ import { AuthenticationService } from '../services/authentication.service';
 })
 export class SignupPage {
 
-  messageStatus = false;
-  message = '';
   registerCredentials = {
       userName: '',
       userEmail: '',
@@ -18,8 +16,7 @@ export class SignupPage {
       userResidence: '',
       userGeneralRegistry: '',
       userDocumentNumber: '',
-      userPassword: '',
-      userPicture: 'base64'
+      userPassword: ''
   };
 
   constructor(
@@ -27,17 +24,7 @@ export class SignupPage {
   ) {}
 
   public register() {
-      this.auth.register(this.registerCredentials).subscribe(success => {
-              if (success) {
-                  this.messageStatus = true;
-                  this.message = 'Successo';
-              } else {
-                  this.message = 'Erro';
-              }
-          },
-          error => {
-              this.message = 'Erro';
-          });
+      this.auth.register(this.registerCredentials).subscribe();
   }
 
 }
