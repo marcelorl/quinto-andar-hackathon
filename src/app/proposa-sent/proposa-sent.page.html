@@ -1,14 +1,21 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>Proposta enviada</ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content padding>
-  <ion-row justify-content-center>
-    <ion-icon name="checkmark-circle"></ion-icon>
-    <div>
-      Sua <b>proposta</b> de troca foi enviada! Aguarde a resposta no seu e-mail.
-    </div>
+  <ion-row align-items-center justify-content-center>
+    <ion-col>
+      <div text-center>
+        <ion-icon name="checkmark-circle" color="success"></ion-icon>
+      </div>
+
+      <div text-center padding-vertical>
+        ENVIADO!
+      </div>
+
+      <div>
+        Sua <b>proposta</b> de troca foi enviada! Aguarde a resposta no seu e-mail, acompanhe suas propostas:
+      </div>
+
+      <div padding-vertical>
+        <ion-button size="large" href="/list" expand="block">PROPOSTAS ENVIADAS</ion-button>
+      </div>
+    </ion-col>
   </ion-row>
 </ion-content>
