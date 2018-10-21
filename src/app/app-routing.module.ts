@@ -7,7 +7,8 @@ const routes: Routes = [
   { path: 'imovel/:id', loadChildren: './house/house.module#HousePageModule' },
   { path: 'proposta-enviada', loadChildren: './proposa-sent/proposa-sent.module#ProposaSentPageModule' },
   { path: 'proposta/:id', loadChildren: './proposal/proposal.module#ProposalPageModule' },
-  { path: 'procurar', loadChildren: './search/search.module#SearchPageModule' }
+  { path: 'procurar', loadChildren: './search/search.module#SearchPageModule' },
+  { path: 'propostas', loadChildren: './proposal-list/proposal-list.module#ProposalListPageModule' }
 ];
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
