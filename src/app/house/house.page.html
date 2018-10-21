@@ -1,14 +1,10 @@
 <ion-content padding>
 
-  <div>
-    <div>
-      <h3>Casa da Mônica</h3>
-    </div>
-
+  <ion-card>
     <ion-slides pager>
 
       <ion-slide>
-        <ion-img src="https://confortotermicoemcasaterrea.files.wordpress.com/2009/11/casaoptativavista1.jpg" alt=""></ion-img>
+        <ion-img src="https://www.plantapronta.com.br/projetos/140/01.jpg" alt=""></ion-img>
       </ion-slide>
 
       <ion-slide>
@@ -20,41 +16,44 @@
       </ion-slide>
 
     </ion-slides>
+    <ion-card-content>
+      <ion-card-title>
+        <h1>Casa da Mônica</h1>
+      </ion-card-title>
+      <ion-list>
+        <div padding-vertical>
+          <ion-icon name="pin"></ion-icon> Natal - RN - CEP - 01311-929
+        </div>
+        <div padding-vertical>
+          <ion-icon name="map"></ion-icon> 460m²
+        </div>
+        <div padding-vertical>
+          <ion-icon name="filing"></ion-icon> 4 quartos
+        </div>
+        <div padding-vertical>
+          <ion-icon name="funnel"></ion-icon> 3 banheiros
+        </div>
+        <div padding-vertical>
+          <ion-icon name="car"></ion-icon> 2 vagas na garagem
+        </div>
+        <div padding-vertical>
+          <ion-icon name="cafe"></ion-icon> Móveis
+        </div>
+        <div padding-vertical>
+          <ion-icon name="wifi"></ion-icon> Wi-fi
+        </div>
+      </ion-list>
 
-    <ion-list>
       <div padding-vertical>
-        <ion-icon name="pin"></ion-icon> Natal - RN - CEP - 01311-929
+        <ion-datetime placeholder="data de entrada" displayFormat="DD/MM/YYYY" name="dateStart" [(ngModel)]="form.dateStart" required></ion-datetime>
+        <ion-datetime placeholder="data de saida" displayFormat="DD/MM/YYYY" name="dateEnd" [(ngModel)]="form.dateEnd" required></ion-datetime>
       </div>
-      <div padding-vertical>
-        <ion-icon name="map"></ion-icon> 460m²
-      </div>
-      <div padding-vertical>
-        <ion-icon name="filing"></ion-icon> 4 quartos
-      </div>
-      <div padding-vertical>
-        <ion-icon name="funnel"></ion-icon> 3 banheiros
-      </div>
-      <div padding-vertical>
-        <ion-icon name="car"></ion-icon> 2 vagas na garagem
-      </div>
-      <div padding-vertical>
-        <ion-icon name="cafe"></ion-icon> Móveis
-      </div>
-      <div padding-vertical>
-        <ion-icon name="wifi"></ion-icon> Wi-fi
-      </div>
-    </ion-list>
+    </ion-card-content>
+  </ion-card>
 
-    <div padding-vertical>
-      <ion-datetime placeholder="data de entrada" displayFormat="DD/MM/YYYY" name="dateStart" [(ngModel)]="form.dateStart" required></ion-datetime>
-      <ion-datetime placeholder="data de saida" displayFormat="DD/MM/YYYY" name="dateEnd" [(ngModel)]="form.dateEnd" required></ion-datetime>
-    </div>
-
-    <div padding>
-      <ion-button size="large" (click)="sendProposal()" expand="block">Enviar Proposta</ion-button>
-    </div>
+  <div padding>
+    <ion-button size="large" (click)="sendProposal()" expand="block">Enviar Proposta</ion-button>
   </div>
-
 </ion-content>
 
 <ion-footer>
