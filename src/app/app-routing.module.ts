@@ -7,7 +7,8 @@ const routes: Routes = [
   { path: 'criar-conta', loadChildren: './signup/signup.module#SignupPageModule' },
   { path: 'procurar', canActivate: [AuthGuardService], loadChildren: './tabs/tabs.module#TabsPageModule' },
   { path: 'casa', loadChildren: './house/house.module#HousePageModule' },
-  { path: 'proposa-enviada', loadChildren: './proposa-sent/proposa-sent.module#ProposaSentPageModule' }
+  { path: 'proposa-enviada', loadChildren: './proposa-sent/proposa-sent.module#ProposaSentPageModule' },
+  { path: 'proposal', loadChildren: './proposal/proposal.module#ProposalPageModule' }
 ];
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
