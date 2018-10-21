@@ -1,0 +1,33 @@
+app-login {
+
+}
+
+$height100: 100%;
+
+ion-grid {
+    width:100%;
+    height: $height100;
+    background: #dfdfdf;
+}
+
+ion-row {
+    height: $height100;
+}
+
+ion-col {
+    border: 1px solid var(--ion-color-primary-shade);
+    background: var(--ion-color-primary-contrast);
+}
+
+ion-button {
+    font-weight: 300;
+}
+
+@media (max-width: 768px) {
+    ion-grid {
+        background: var(--ion-color-primary-contrast);
+    }
+    ion-col {
+        border: none;
+    }
+}

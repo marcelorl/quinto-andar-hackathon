@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Login</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-grid>
+  <form #registerForm="ngForm">
+  <ion-row justify-content-center>
+    <ion-col align-self-center size-md="6" size-lg="5" size-xs="12">
+      <div padding>
+        <ion-item>
+          <ion-input type="email" placeholder="cpf" name="cpf" [(ngModel)]="loginCredentials.cpf"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-input type="password" placeholder="password" name="password" [(ngModel)]="loginCredentials.password"></ion-input>
+        </ion-item>
+      </div>
+
+      <div padding>
+        <ion-button (click)="login()" size="large" href="/touchid" expand="block">Sign in</ion-button>
+      </div>
+      <div text-center>
+        Não tem uma conta? <a href="/criar-conta">Clique aqui</a>
+      </div>
+    </ion-col>
+  </ion-row>
+  </form>
+</ion-grid>
