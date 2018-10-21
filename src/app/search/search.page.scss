@@ -1,0 +1,11 @@
+h3 {
+    color: var(--ion-color-primary);
+}
+
+ion-list a {
+    width: 30px;
+
+    * {
+        height: 100%;
+    }
+}

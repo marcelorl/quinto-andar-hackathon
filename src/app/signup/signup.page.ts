@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { AuthenticationService } from '../services/authentication.service';
-import {Router} from "@angular/router";
+import {Router} from '@angular/router';
 
 interface Response {
     success: boolean;
@@ -34,7 +34,7 @@ export class SignupPage {
   public register() {
       this.auth.register(this.registerCredentials).subscribe((res: Response) => {
           if (res.success) {
-              this.router.navigate(['/']);
+              this.router.navigate(['/procurar']);
           }
       });
   }

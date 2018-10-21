@@ -25,7 +25,7 @@ export class AuthenticationService {
       if (res) {
         this.authenticationState.next(true);
       }
-    })
+    });
   }
 
   login(credentials) {
