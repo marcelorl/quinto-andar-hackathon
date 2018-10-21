@@ -1,5 +1,12 @@
 import { Component } from '@angular/core';
 import { AuthenticationService } from '../services/authentication.service';
+import {Router} from "@angular/router";
+
+interface Response {
+    success: boolean;
+    message: string;
+    id?: string;
+}
 
 @Component({
   selector: 'app-signup',
@@ -7,7 +14,6 @@ import { AuthenticationService } from '../services/authentication.service';
   styleUrls: ['./signup.page.scss'],
 })
 export class SignupPage {
-
   registerCredentials = {
       userName: '',
       userEmail: '',
@@ -16,15 +22,21 @@ export class SignupPage {
       userResidence: '',
       userGeneralRegistry: '',
       userDocumentNumber: '',
-      userPassword: ''
+      userPassword: '',
+      userPicture: 'base64'
   };
 
   constructor(
-      private auth: AuthenticationService
+      private auth: AuthenticationService,
+      private router: Router
   ) {}
 
   public register() {
-      this.auth.register(this.registerCredentials).subscribe();
+      this.auth.register(this.registerCredentials).subscribe((res: Response) => {
+          if (res.success) {
+              this.router.navigate(['/']);
+          }
+      });
   }
 
 }

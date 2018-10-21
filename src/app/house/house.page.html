@@ -1,0 +1,64 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>house</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+
+  <div>
+    <div>
+      <h3>Casa da Mônica</h3>
+    </div>
+
+    <ion-slides pager>
+
+      <ion-slide>
+        <ion-img src="https://confortotermicoemcasaterrea.files.wordpress.com/2009/11/casaoptativavista1.jpg" alt=""></ion-img>
+      </ion-slide>
+
+      <ion-slide>
+        <ion-img src="https://confortotermicoemcasaterrea.files.wordpress.com/2009/11/planta.jpg" alt=""></ion-img>
+      </ion-slide>
+
+      <ion-slide>
+        <ion-img src="https://i0.wp.com/www.donome.com.br/wp-content/uploads/2012/03/Venda-Plantas-Projetos-Casa-Online.jpg?resizeu003d385%2C230" alt=""></ion-img>
+      </ion-slide>
+
+    </ion-slides>
+
+    <ion-list>
+      <div padding-vertical>
+        <ion-icon name="pin"></ion-icon> Natal - RN - CEP - 01311-929
+      </div>
+      <div padding-vertical>
+        <ion-icon name="map"></ion-icon> 460m²
+      </div>
+      <div padding-vertical>
+        <ion-icon name="filing"></ion-icon> 4 quartos
+      </div>
+      <div padding-vertical>
+        <ion-icon name="funnel"></ion-icon> 3 banheiros
+      </div>
+      <div padding-vertical>
+        <ion-icon name="car"></ion-icon> 2 vagas na garagem
+      </div>
+      <div padding-vertical>
+        <ion-icon name="flame"></ion-icon> Móveis
+      </div>
+      <div padding-vertical>
+        <ion-icon name="wifi"></ion-icon> Wi-fi
+      </div>
+    </ion-list>
+
+    <div padding-vertical>
+      <ion-datetime placeholder="data de entrada" displayFormat="DD/MM/YYYY" name="dateStart" [(ngModel)]="form.dateStart" required></ion-datetime>
+      <ion-datetime placeholder="data de saida" displayFormat="DD/MM/YYYY" name="dateEnd" [(ngModel)]="form.dateEnd" required></ion-datetime>
+    </div>
+
+    <div padding>
+      <ion-button size="large" (click)="sendProposal()" expand="block">Enviar Proposta</ion-button>
+    </div>
+  </div>
+
+</ion-content>

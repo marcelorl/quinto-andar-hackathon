@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { AuthenticationService } from '../services/authentication.service';
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-login',
@@ -8,28 +9,21 @@ import { AuthenticationService } from '../services/authentication.service';
 })
 export class LoginPage {
 
-  messageStatus = false;
-  message = '';
   loginCredentials = {
     cpf: '',
     password: ''
   };
 
   constructor(
-      private auth: AuthenticationService
+      private auth: AuthenticationService,
+      private router: Router
   ) { }
 
   public login() {
     this.auth.login(this.loginCredentials).subscribe(success => {
           if (success) {
-            this.messageStatus = true;
-            this.message = 'Successo';
-          } else {
-            this.message = 'Erro';
+              this.router.navigate(['/']);
           }
-        },
-        error => {
-          this.message = 'Erro';
         });
   }
 
