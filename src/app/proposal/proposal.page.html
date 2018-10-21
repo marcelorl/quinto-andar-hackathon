@@ -25,3 +25,24 @@
   <ion-button size="large" expand="block">CONTRA PROPOSTA</ion-button> <br>
   <ion-button size="large" expand="block">RECUSAR</ion-button>
 </ion-content>
+
+<ion-footer>
+  <ion-toolbar color="primary">
+
+    <ion-tabs>
+      <ion-tab label="procurar" icon="search" href="/procurar">
+        <ion-router-outlet name="procurar"></ion-router-outlet>
+      </ion-tab>
+      <ion-tab label="mensagens" icon="chatboxes" href="/mensagens">
+        <ion-router-outlet name="mensagens"></ion-router-outlet>
+      </ion-tab>
+      <ion-tab label="chave" icon="key" href="/chave">
+        <ion-router-outlet name="chave"></ion-router-outlet>
+      </ion-tab>
+      <ion-tab label="ajuda" icon="help" href="/ajuda">
+        <ion-router-outlet name="ajuda"></ion-router-outlet>
+      </ion-tab>
+    </ion-tabs>
+
+  </ion-toolbar>
+</ion-footer>
